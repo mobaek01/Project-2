@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <%- include ('../partials/head.ejs') %>
+    <body>
+        <%- include ('../partials/header.ejs') %>
+        <main>
+            <h1 class = "showHeader">ADD A NEW POST</h1>
+            <form class="form" action="/feed" method="POST">
+                Username: <input class = "textBox" type="text" name="username" placeholder = "Type your username"><br>
+                Image: <input class = "textBox" type="text" name="img" placeholder = "Paste your image url"><br>
+                Caption: <input class = "textBox" type="text" name="caption" placeholder = "Please add a caption"><br>
+                <input class = "button" type="submit" name="" value="ADD POST">
+            </form>
+        </main>
+        <%- include ('../partials/footer.ejs') %>
+    </body>
+</html>

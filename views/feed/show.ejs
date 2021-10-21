@@ -4,15 +4,28 @@
     <body>
         <%- include ('../partials/header.ejs') %>
         <main>
-            <h1>View this post</h1>
+            <h1 class = "showHeader">Viewing...</h1>
             <div class="showPage">
-                <h3><%=feed.username%></h3>
+                <div class="showUser">
+                    <div class="userName">
+                        <span class="material-icons">account_circle</span>
+                        <h3><%=feed.username%></h3>
+                    </div>
+                    <div class="editDelete">
+                        <a class = "button" href="/feed/<%=feed.id%>/edit">EDIT</a>
+                        <form action="/feed/<%=feed.id%>?_method=DELETE" method="POST">
+                            <input class = "button" type="submit" name="" value="DELETE">
+                        </form>
+                    </div>
+                </div>
                 <img class = "showImg" src="<%=feed.img%>">
                 <p><%=feed.caption%></p>
             </div>
+
             <form class="commentForm" action="index.html" method="post">
-                <label for="showCap">Comments...</label>
-                <textarea id = "showCap"></textarea>
+                <label class = "label" for="showCap">Comments...</label>
+                <textarea id = "showCap" placeholder = "Write your comments here"></textarea>
+                <input class = "button" type="submit" value="SUBMIT">
             </form>
         </main>
         <%- include ('../partials/footer.ejs') %>

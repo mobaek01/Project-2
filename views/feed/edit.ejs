@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <%- include ('../partials/head.ejs') %>
+    <body>
+        <%- include ('../partials/header.ejs') %>
+        <main>
+            <h1 class = "showHeader">EDIT YOUR NEW POST</h1>
+            <form class="form" action="/feed/<%=feed.id%>?_method=PUT" method="POST">
+                Image: <input class = "textBox" type="text" name="img" value = "<%=feed.img%>"><br>
+                <label class = "label" for="showCap">Caption:</label>
+                <textarea id = "showCap" name="caption" placeholder="<%=feed.caption%>"></textarea>
+                <input class = "button" type="submit" value="EDIT POST">
+            </form>
+        </main>
+        <%- include ('../partials/footer.ejs') %>
+    </body>
+</html>
