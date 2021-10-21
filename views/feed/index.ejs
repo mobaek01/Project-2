@@ -9,11 +9,12 @@
                     <a class = "feedCard" href="/feed/<%=feeds[i].id%>">
                         <h3 class="userTitle"><span class="material-icons">account_circle</span><%=feeds[i].username%></h3>
                         <img class = "feedImg" src="<%=feeds[i].img%>">
-                        <div class="likeComment">
-                            <form class = "likeBtn" action="index.html" method="post">
+                        <p class = "likeNum"><%=feeds[i].likes%> Likes</p>
+                        <div class="likeBox">
+                            <form class = "likeBtn" action="/feed/<%=feeds[i].id%>/like?_method=PUT" method="POST">
                                 <input class = "material-icons heart" type="submit" name="" value="favorite_border">
                             </form>
-                            <form class = "likeBtn" action="index.html" method="post">
+                            <form class = "likeBtn" action="/feed/<%=feeds[i].id%>" method="GET">
                                 <input class = "material-icons heart" type="submit" name="" value="comment">
                             </form>
                         </div>
