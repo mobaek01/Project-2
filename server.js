@@ -28,6 +28,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 
+app.get('/', (req, res) => {
+    res.render('/feed')
+})
+
 //////////////////////////// CONTROLLERS //////////////////////////////////////
 
 const feedController = require('./controllers/feed_controller.js')
