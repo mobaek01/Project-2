@@ -29,7 +29,7 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 
 app.get('/', (req, res) => {
-    res.render('/feed')
+    res.redirect('/feed')
 })
 
 //////////////////////////// CONTROLLERS //////////////////////////////////////
