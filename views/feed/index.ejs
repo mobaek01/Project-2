@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <%- include ('../partials/head.ejs') %>
+    <body>
+        <%- include ('../partials/header.ejs') %>
+        <main>
+            <%for (let i = 0; i < feeds.length; i++) { %>
+                <div class="feedPost">
+                    <a class = "feedCard" href="/feed/<%=feeds[i].id%>">
+                        <h3 class="userTitle"><%=feeds[i].username%></h3><br>
+                        <img class = "feedImg" src="<%=feeds[i].img%>">
+                        <div class="likeComment">
+                            <form class = "likeBtn" action="index.html" method="post">
+                                <input class = "material-icons heart" type="submit" name="" value="favorite_border">
+                            </form>
+                            <form class = "likeBtn" action="index.html" method="post">
+                                <input class = "material-icons heart" type="submit" name="" value="comment">
+                            </form>
+                        </div>
+                        <p class="userCap"><%=feeds[i].caption%>
+                    </a>
+            <% } %>
+        </main>
+        <%- include ('../partials/footer.ejs') %>
+    </body>
+</html>

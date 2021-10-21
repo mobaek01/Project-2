@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <%- include ('../partials/head.ejs') %>
+    <body>
+        <%- include ('../partials/header.ejs') %>
+        <main>
+            <h1>View this post</h1>
+            <div class="showPage">
+                <h3><%=feed.username%></h3>
+                <img class = "showImg" src="<%=feed.img%>">
+                <p><%=feed.caption%></p>
+            </div>
+            <form class="commentForm" action="index.html" method="post">
+                <label for="showCap">Comments...</label>
+                <textarea id = "showCap"></textarea>
+            </form>
+        </main>
+        <%- include ('../partials/footer.ejs') %>
+    </body>
+</html>
