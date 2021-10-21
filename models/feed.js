@@ -5,6 +5,7 @@ feedSchema = new Schema({
     username: {type:String, required:true},
     img: {type:String, required:true},
     caption: String,
+    likes: Number,
     },
     {timestamps:true}
 )

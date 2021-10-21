@@ -17,8 +17,9 @@ a {
     border-radius: 3px;
     background: #E6E1DF;
     padding: 2px 16px 2px 16px;
-    font-family: 'Arial', cursive;
+    font-family: 'Shadows Into Light', cursive;
     font-size: 14px;
+    margin-top: 1%;
 }
 
 main {
@@ -26,7 +27,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 140px;
+    margin-top: 160px;
 }
 
 /* INDEX PAGE */
@@ -48,8 +49,7 @@ header {
     font-family: 'Shadows Into Light', cursive;
     font-size: 1.5em;
     width: 20%;
-    padding-left: 2%;
-    color: white;
+    padding-left: 4%;
 }
 
 .headerBtn {
@@ -57,13 +57,11 @@ header {
     justify-content: flex-end;
     align-items: center;
     width: 80%;
-    padding-right: 2%;
+    padding-right: 4%;
 }
 
 .homeBtn {
-    font-size: 36dp;
     margin-left: .5em;
-    color: white;
 }
 
 .feedPost {
@@ -82,8 +80,7 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background: silver;
-    padding: 4% 0 8% 0;
+    padding: 2% 0 8% 0;
     border-bottom: none;
 
 }
@@ -92,18 +89,27 @@ header {
     border: 1px solid silver;
     width: 70vh;
     height: 60vh;
-    margin-bottom: -3%;
+    margin-bottom: -6%;
     margin-top: -10%;
     border-bottom: none;
     border-top: none;
 }
 
-.likeComment {
-    display: flex;
-    flex-direction: row;
+.likeNum {
+    margin-bottom: -2%;
+    padding-left: 1%;
+    padding-top: 2%;
+    font-size: .7em;
+}
+
+.likeBox {
+    box-sizing: border-box;
     border: 1px solid silver;
-    border-bottom: none;
+    display: flex;
+    margin-top: -4%;
     margin-bottom: -4%;
+    border-top: none;
+    border-bottom: none;
 }
 
 .likeBtn {
@@ -129,6 +135,11 @@ header {
 
 /* SHOW PAGE */
 
+.showHeader {
+    background: silver;
+    padding: 1% 7%;
+}
+
 .showPage {
     display: flex;
     flex-direction: column;
@@ -138,11 +149,33 @@ header {
     width: 50vw;
 }
 
+.showUser {
+    display: flex;
+    align-content: center;
+    width: 65vw;
+}
+
+.userName {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    width: 50%;
+
+}
+
+.editDelete {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+}
+
 .showImg {
-    width: 45vw;
+    width: 65vw;
     height: 65vh;
     box-sizing: border-box;
-    border: 1px solid silver;
+    border: 1px solid #F5F5F5;
 }
 
 .commentForm {
@@ -151,17 +184,47 @@ header {
     align-items: center;
 }
 
+.label {
+    margin-top: 3%;
+    margin-bottom: 1%;
+}
+
 #showCap {
     resize: none;
-    width: 300%;
+    width: 50vw;
+    height: 15vh;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+}
+
+/* NEW POST PAGE */
+
+.form {
+    width: 50%;
+    display: block;
+}
+
+.textBox {
+    resize: none;
+    width: 100%;
+    margin: 1%;
 }
 
 /* FOOTER */
 
 footer {
     display: flex;
-    justify-content: center;
-    margin-top: 3%;
+    align-items: center;
+    position: relative;
+    margin-top: 10%;
+    margin-left: 45%;
+}
+
+.copyright {
+    margin-right: 1%;
 }
 
 .footerIcon {
