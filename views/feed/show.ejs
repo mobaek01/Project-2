@@ -21,11 +21,18 @@
                 <img class = "showImg" src="<%=feed.img%>">
                 <p class = "showText"><%=feed.caption%></p>
             </div>
-            <form class="commentForm" action="index.html" method="post">
+            <form class="commentForm" action="/feed/<%=feed.id%>/comment?_method=PUT" method="POST">
                 <label class = "label" for="showCap">Comments...</label>
-                <textarea id = "showCap" placeholder = "Write your comments here"></textarea>
+                Username: <input class = "authorBox" type="text" name="author" value="<%=currentUser.username%>">
+                <textarea class = "commentBox" id = "showCap" name="feedback"placeholder = "Write your comments here"></textarea>
                 <input class = "button commentBtn" type="submit" value="SUBMIT">
             </form>
+            <% for (let i = 0; i <feed.comments.length; i ++) { %>
+                <div class = "userComment">
+                    <h4><%=feed[i].comments.author%></h4>
+                    <p><%=feed[i].comments.feedback%></p>
+                </div>
+            <% } %>
         </main>
         <%- include ('../partials/footer.ejs') %>
     </body>

@@ -31,6 +31,13 @@ router.put('/:id/like', (req, res) => {
     )
 })
 
+// router.put('/:id/comment', (req, res) => {
+//     Feed.findByIdAndUpdate{
+//         req.params.id,
+//         req.body
+//     }
+// })
+
 ///////////////////////////// DELETE ////////////////////////////////////////
 
 router.delete('/:id', isAuthenticated, (req, res) => {
