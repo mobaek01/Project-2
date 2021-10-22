@@ -171,6 +171,14 @@ header {
     width: 50%;
 }
 
+.edit {
+    margin-right: 2%;
+}
+
+.delete {
+    margin-top: 3px;
+}
+
 .showImg {
     width: 65vw;
     height: 65vh;

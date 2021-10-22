@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <%- include ('../partials/head.ejs') %>
+    <body>
+        <%- include ('../partials/header.ejs') %>
+        <main>
+            <form class="form" action="/users" method="post">
+                Username: <input type="text" name="username">
+                Password: <input type="password" name="password">
+            </form>
+        </main>
+        <%- include ('../partials/footer.ejs') %>
+    </body>
+</html>

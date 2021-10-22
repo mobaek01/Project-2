@@ -12,9 +12,9 @@
                         <h3><%=feed.username%></h3>
                     </div>
                     <div class="editDelete">
-                        <a class = "button" href="/feed/<%=feed.id%>/edit">EDIT</a>
+                        <a class = "button edit" href="/feed/<%=feed.id%>/edit">EDIT</a>
                         <form action="/feed/<%=feed.id%>?_method=DELETE" method="POST">
-                            <input class = "button" type="submit" name="" value="DELETE">
+                            <input class = "button delete" type="submit" name="" value="DELETE">
                         </form>
                     </div>
                 </div>
