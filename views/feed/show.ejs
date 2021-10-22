@@ -19,12 +19,12 @@
                     </div>
                 </div>
                 <img class = "showImg" src="<%=feed.img%>">
-                <p><%=feed.caption%></p>
+                <p class = "showText"><%=feed.caption%></p>
             </div>
             <form class="commentForm" action="index.html" method="post">
                 <label class = "label" for="showCap">Comments...</label>
                 <textarea id = "showCap" placeholder = "Write your comments here"></textarea>
-                <input class = "button" type="submit" value="SUBMIT">
+                <input class = "button commentBtn" type="submit" value="SUBMIT">
             </form>
         </main>
         <%- include ('../partials/footer.ejs') %>

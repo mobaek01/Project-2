@@ -4,6 +4,7 @@
 
 body {
     font-family: 'Shadows Into Light', cursive;
+
 }
 
 a {
@@ -28,6 +29,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 160px;
+
 }
 
 /* INDEX PAGE */
@@ -62,6 +64,11 @@ header {
 
 .homeBtn {
     margin-left: .5em;
+}
+
+.logOut {
+    border: none;
+    background: none;
 }
 
 .feedPost {
@@ -226,9 +233,20 @@ header {
 footer {
     display: flex;
     align-items: center;
-    position: relative;
-    margin-top: 10%;
-    margin-left: 45%;
+    align-content: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.footerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #38c29e;
+    padding-right: 2%;
+    padding-left: 2%;
+    margin-right: 50px;
+    margin-top: 1%;
 }
 
 .copyright {
@@ -236,7 +254,128 @@ footer {
 }
 
 .footerIcon {
-    width: 1.7vw;
-    height: 3vh;
+    width: 15px;
+    height: 20px;
     margin-right: 1%;
+}
+
+@media only screen and (max-width: 480px){
+    header{
+        width: 95%;
+    }
+
+    .headerTitle{
+        font-size: 13px;
+    }
+
+    .welcome {
+        font-size: 11px;
+    }
+
+    main {
+        margin-top: 80px;
+    }
+
+    .feedCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 300px;
+
+    }
+
+    .userTitle {
+        width: 300px;
+        border: none;
+    }
+
+    .feedImg {
+        width: 300px;
+        height: 300px;
+        border: none;
+    }
+
+    .likeNum {
+        display: flex;
+        font-size: 8px;
+        align-self: flex-start;
+        border: none;
+        width: 100%;
+        margin-top: 5%;
+    }
+    .likeBox {
+        border: none;
+        width: 100%;
+        margin-top: 1%;
+    }
+
+    .userCap {
+        width: 330px;
+        font-size: 11px;
+        border: none;
+        margin-left: 25px;
+        margin-top: 15px;
+    }
+
+    .button {
+        font-size: 9px;
+    }
+
+    .showHeader {
+        font-size: 13px;
+    }
+
+    .showUser {
+        width: 300px;
+        font-size: 11px;
+    }
+
+    .showImg {
+        width: 300px;
+        height: 300px;
+    }
+
+    .showText {
+        font-size: 11px;
+        width: 300px;
+    }
+
+    .commentForm {
+        width: 300px;
+    }
+
+    .label {
+        font-size: 11px;
+    }
+
+    #showCap {
+        width: 96%;
+        height: 50px;
+    }
+
+    .commentBtn {
+        font-size: 9px;
+        margin-bottom: 3%;
+    }
+
+    .form {
+        font-size: 11px;
+        width: 300px;
+    }
+
+    .capSubmit {
+        margin-bottom: 3%;
+    }
+
+    footer {
+        width: 300px;
+        display: flex;
+        margin-left: 7.5%;
+    }
+
+    .footerDiv {
+        display
+    }
 }

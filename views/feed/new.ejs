@@ -6,7 +6,7 @@
         <main>
             <h1 class = "showHeader">ADD A NEW POST</h1>
             <form class="form" action="/feed" method="POST">
-                Username: <input class = "textBox" type="text" name="username" placeholder = "Type your username"><br>
+                Username: <input class = "textBox" type="text" name="username" value = "<%=currentUser.username%>"><br>
                 Image: <input class = "textBox" type="text" name="img" placeholder = "Paste your image url"><br>
                 Caption: <textarea id = "showCap" name="caption" placeholder="Please add a caption"></textarea><br>
                 <input class = "button" type="submit" name="" value="ADD POST">

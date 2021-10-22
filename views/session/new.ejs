@@ -4,11 +4,11 @@
     <body>
         <%- include ('../partials/header.ejs') %>
         <main>
-            <h1 class = "showHeader">Register</h1>
-            <form class="form" action="/users" method="post">
+            <h1 class = "showHeader">Log In</h1>
+            <form class="form" action="/sessions" method="post">
                 Username: <input class = "textBox" type="text" name="username">
                 Password: <input class = "textBox" type="password" name="password">
-                <input class = "button" type="submit" value="Register">
+                <input class = "button" type="submit" value="Log In">
             </form>
         </main>
         <%- include ('../partials/footer.ejs') %>

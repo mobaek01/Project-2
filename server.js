@@ -27,6 +27,13 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(
+    session({
+        secret: process.env.SECRET,
+        resave: false,
+        saveUninitialized: false
+    })
+)
 
 app.get('/', (req, res) => {
     res.redirect('/feed')
@@ -36,6 +43,10 @@ app.get('/', (req, res) => {
 
 const feedController = require('./controllers/feed_controller.js')
 app.use('/feed', feedController)
+const userController = require('./controllers/user_controller.js')
+app.use('/users', userController)
+const sessionController = require('./controllers/session_controller.js')
+app.use('/sessions', sessionController)
 
 //////////////////////////// CONNECTION //////////////////////////////////////
 

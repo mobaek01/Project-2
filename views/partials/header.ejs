@@ -1,11 +1,20 @@
 <header>
     <div class="headerTitle">
-        <h1>Mo'Gram</h1>
+        <a href="/feed">
+            <h1>Mo'Gram</h1>
+        </a>
     </div>
     <div class="headerBtn">
-        <a class = "material-icons homeBtn" href="/feed">home</a>
+        <% if (currentUser) { %>
+            <h3 class = "welcome">Welcome <%=currentUser.username%></h3>
+            <form class="" action="/sessions?_method=DELETE" method="POST">
+                <input class = "material-icons homeBtn logOut" type="submit" value="logout">
+            </form>
+        <% } else { %>
+            <a class = "material-icons homeBtn" href="/sessions/new">login</a>
+            <a class = "material-icons homeBtn" href="/users/new">how_to_reg</a>
+        <% }%>
         <a class = "material-icons homeBtn" href="/feed/new">post_add</a>
-        <a class = "material-icons homeBtn" href="/feed">login</a>
-        <a class = "material-icons homeBtn" href="/feed">how_to_reg</a>
+        <a class = "material-icons homeBtn" href="/feed">home</a>
     </div>
 </header>

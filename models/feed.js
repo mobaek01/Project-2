@@ -6,6 +6,12 @@ feedSchema = new Schema({
     img: {type:String, required:true},
     caption: String,
     likes: Number,
+    comments: [
+        {
+            author: String,
+            feedback: String
+        }
+    ]
     },
     {timestamps:true}
 )

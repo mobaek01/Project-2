@@ -3,6 +3,14 @@ const router = express.Router()
 const Feed = require('../models/feed.js')
 const feedSeed = require('../models/seed.js')
 
+const isAuthenticated = (req, res, next) => {
+    if (req.session.currentUser) {
+        return next()
+    } else {
+        res.redirect('/sessions/new')
+    }
+}
+
 ///////////////////////////// SEED ///////////////////////////////////////////
 
 router.get('/seed', (req, res) => {
@@ -25,7 +33,7 @@ router.put('/:id/like', (req, res) => {
 
 ///////////////////////////// DELETE ////////////////////////////////////////
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', isAuthenticated, (req, res) => {
     Feed.findByIdAndDelete(req.params.id, (error, data) => {
         res.redirect('/feed')
     })
@@ -35,12 +43,13 @@ router.delete('/:id', (req, res) => {
 
 //// EDIT Route
 
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit', isAuthenticated, (req, res) => {
     Feed.findById(req.params.id, (error, foundFeed) => {
         res.render(
             'feed/edit.ejs',
             {
-                feed: foundFeed
+                feed: foundFeed,
+                currentUser: req.session.currentUser
             }
         )
     })
@@ -62,9 +71,12 @@ router.put('/:id', (req, res) => {
 
 //// NEW Route
 
-router.get('/new', (req, res) => {
+router.get('/new', isAuthenticated, (req, res) => {
     res.render(
-        'feed/new.ejs'
+        'feed/new.ejs',
+        {
+            currentUser: req.session.currentUser
+        }
     )
 })
 
@@ -85,6 +97,7 @@ router.get('/' , (req, res) => {
             'feed/index.ejs',
             {
                 feeds: allFeeds,
+                currentUser: req.session.currentUser
             }
         )
     })
@@ -92,12 +105,13 @@ router.get('/' , (req, res) => {
 
 //// SHOW Route
 
-router.get('/:id', (req, res) => {
+router.get('/:id', isAuthenticated, (req, res) => {
     Feed.findById(req.params.id, (error, foundFeed) => {
         res.render(
             'feed/show.ejs',
             {
                 feed: foundFeed,
+                currentUser: req.session.currentUser
             }
         )
     })
