@@ -4,6 +4,7 @@
 
 body {
     font-family: 'Shadows Into Light', cursive;
+    width: 100vw;
 
 }
 
@@ -71,6 +72,10 @@ header {
     background: none;
 }
 
+.feedCard {
+
+}
+
 .feedPost {
     margin-bottom: 5%;
     height: 80%;
@@ -79,6 +84,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 
 .userTitle {
@@ -89,7 +95,6 @@ header {
     align-items: center;
     padding: 2% 0 8% 0;
     border-bottom: none;
-
 }
 
 .feedImg {
@@ -125,6 +130,7 @@ header {
     border-bottom: none;
     padding: 5% 0 13% 0;
     margin-bottom: -10%;
+
 }
 
 .heart {
@@ -235,7 +241,7 @@ footer {
     align-items: center;
     align-content: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
 }
 
 .footerDiv {
@@ -243,10 +249,7 @@ footer {
     justify-content: center;
     align-items: center;
     background: #38c29e;
-    padding-right: 2%;
-    padding-left: 2%;
-    margin-right: 50px;
-    margin-top: 1%;
+    width: 100%;
 }
 
 .copyright {

@@ -20,9 +20,6 @@
                         </div>
                         <p class="userCap"><%=feeds[i].caption%>
                     </a>
-                    <form action="/feed/<%=feeds[i].id%>?_method=DELETE" method="POST">
-                        <input class = "button" type="submit" name="" value="DELETE">
-                    </form>
             <% } %>
         </main>
         <%- include ('../partials/footer.ejs') %>
