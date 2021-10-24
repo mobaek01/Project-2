@@ -31,12 +31,17 @@ router.put('/:id/like', (req, res) => {
     )
 })
 
-// router.put('/:id/comment', (req, res) => {
-//     Feed.findByIdAndUpdate{
-//         req.params.id,
-//         req.body
-//     }
-// })
+///////////////////////////// COMMENT ///////////////////////////////////////
+
+router.put('/:id/comment', (req, res) => {
+    Feed.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        (error, updatedComment) => {
+            res.redirect('/feed/:id')
+        }
+    )
+})
 
 ///////////////////////////// DELETE ////////////////////////////////////////
 

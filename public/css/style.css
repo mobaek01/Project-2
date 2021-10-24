@@ -21,7 +21,6 @@ a {
     padding: 2px 16px 2px 16px;
     font-family: 'Shadows Into Light', cursive;
     font-size: 14px;
-    margin-top: 1%;
 }
 
 main {
@@ -70,10 +69,6 @@ header {
 .logOut {
     border: none;
     background: none;
-}
-
-.feedCard {
-
 }
 
 .feedPost {
@@ -221,6 +216,17 @@ header {
     align-items: center;
 }
 
+.commentBtn {
+    margin-top: 1%;
+}
+
+.authorBox {
+    display: flex;
+    align-self: flex-start;
+    margin-bottom: 1%;
+
+}
+
 /* NEW POST PAGE */
 
 .form {
@@ -242,6 +248,7 @@ footer {
     align-content: center;
     justify-content: center;
     width: 100%;
+    margin-top: 1%;
 }
 
 .footerDiv {
@@ -386,9 +393,8 @@ footer {
     }
 
     footer {
-        width: 300px;
+        width: 100%;
         display: flex;
-        margin-left: 7.5%;
     }
 
     .footerDiv {

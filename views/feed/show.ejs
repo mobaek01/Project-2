@@ -23,14 +23,14 @@
             </div>
             <form class="commentForm" action="/feed/<%=feed.id%>/comment?_method=PUT" method="POST">
                 <label class = "label" for="showCap">Comments...</label>
-                Username: <input class = "authorBox" type="text" name="author" value="<%=currentUser.username%>">
+                <input class = "authorBox" type="text" name="author" value="<%=currentUser.username%>">
                 <textarea class = "commentBox" id = "showCap" name="feedback"placeholder = "Write your comments here"></textarea>
                 <input class = "button commentBtn" type="submit" value="SUBMIT">
             </form>
-            <% for (let i = 0; i <feed.comments.length; i ++) { %>
+            <% for (let i = 0; i < feed.comments.length; i ++) { %>
                 <div class = "userComment">
-                    <h4><%=feed[i].comments.author%></h4>
-                    <p><%=feed[i].comments.feedback%></p>
+                    <h4><%=feed[0].comments.author%></h4>
+                    <p><%=feed[1].comments.feedback%></p>
                 </div>
             <% } %>
         </main>
