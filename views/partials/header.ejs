@@ -6,7 +6,7 @@
     </div>
     <div class="headerBtn">
         <% if (currentUser) { %>
-            <h3 class = "welcome">Welcome <%=currentUser.username%></h3>
+            <h3 class = "welcome">WELCOME, <%=currentUser.username%></h3>
             <form class="" action="/sessions?_method=DELETE" method="POST">
                 <input class = "material-icons homeBtn logOut" type="submit" value="logout">
             </form>

@@ -7,7 +7,8 @@ sessions.get('/new', (req, res) => {
     res.render(
         'session/new.ejs',
         {
-            currentUser: req.session.currentUser
+            currentUser: req.session.currentUser,
+            tabTitle: "LOGIN"
         }
     )
 })

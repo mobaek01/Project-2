@@ -7,7 +7,8 @@ users.get('/new', (req, res) => {
     res.render(
         'user/new.ejs',
         {
-            currentUser: req.session.currentUser
+            currentUser: req.session.currentUser,
+            tabTitle: "REGISTER"
         }
     )
 })

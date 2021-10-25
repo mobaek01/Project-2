@@ -9,7 +9,7 @@
                     <a class = "feedCard" href="/feed/<%=feeds[i].id%>">
                         <h3 class="userTitle"><span class="material-icons">account_circle</span><%=feeds[i].username%></h3>
                         <img class = "feedImg" src="<%=feeds[i].img%>">
-                        <p class = "likeNum"><%=feeds[i].likes%> Likes</p>
+                        <p class = "likeNum"><%=feeds[i].likes%> LIKES</p>
                         <div class="likeBox">
                             <form class = "likeBtn" action="/feed/<%=feeds[i].id%>/like?_method=PUT" method="POST">
                                 <input class = "material-icons heart" type="submit" name="" value="favorite_border">

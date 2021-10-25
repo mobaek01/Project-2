@@ -47,6 +47,8 @@ const userController = require('./controllers/user_controller.js')
 app.use('/users', userController)
 const sessionController = require('./controllers/session_controller.js')
 app.use('/sessions', sessionController)
+const commentController = require('./controllers/comments_controller.js')
+app.use('/comments', commentController)
 
 //////////////////////////// CONNECTION //////////////////////////////////////
 
