@@ -30,7 +30,7 @@
                 <h1 class = commentSecTitle>Comment Section</h1>
                 <% for (let i = 0; i < comment.length; i ++) { %>
                     <div class = "userComment">
-                        <p class = "comment"><u><%=comment[i].author%></u>: <%=comment[i].text%></p>
+                        <p class = "comment"><span class = "commentAuth"><u><%=comment[i].author%>:</u></span> <%=comment[i].text%></p>
                     </div>
                 <% } %>
             </div>
