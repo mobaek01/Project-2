@@ -231,16 +231,20 @@ header {
 .commentSection {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+    width: 70%;
     margin-bottom: 3%;
 }
 
 .commentSecTitle {
-
+    text-align: center;
+    background: silver;
+    width: 100%;
 }
 
-.commentTitle {
-    font-style:
+.userComment {
+    width: 80%;
+    margin-bottom: 2%;
 }
 
 /* NEW POST PAGE */
@@ -406,6 +410,10 @@ footer {
 
     .commentBox {
         width: 150px;
+    }
+
+    .comment {
+        font-size: 10px;
     }
 
     footer {

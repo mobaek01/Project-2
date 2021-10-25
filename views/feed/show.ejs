@@ -4,7 +4,6 @@
     <body>
         <%- include ('../partials/header.ejs') %>
         <main>
-            <h1 class = "showHeader">Viewing...</h1>
             <div class="showPage">
                 <div class="showUser">
                     <div class="userName">
@@ -31,10 +30,7 @@
                 <h1 class = commentSecTitle>Comment Section</h1>
                 <% for (let i = 0; i < comment.length; i ++) { %>
                     <div class = "userComment">
-                        <h4><u>Commenter</u></h4>
-                        <p><%=comment[i].author%></p>
-                        <h4><u>Comment</u></h4>
-                        <p><%=comment[i].text%></p>
+                        <p class = "comment"><u><%=comment[i].author%></u>: <%=comment[i].text%></p>
                     </div>
                 <% } %>
             </div>
