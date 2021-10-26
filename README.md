@@ -1,7 +1,7 @@
 # Mo'Gram
 
 ### Link to Live Website:
-https://limitless-scrubland-26646.herokuapp.com/feed/6171c94e571a203690e81722
+https://limitless-scrubland-26646.herokuapp.com/feed
 
 ### Approach Taken:
 
